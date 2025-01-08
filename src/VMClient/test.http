@@ -1,0 +1,15 @@
+### Creer une VM
+
+POST http://127.0.0.1:8001/CREATE_VM/
+Content-Type: application/json
+
+{
+	"user_id":1,
+	"template":{
+		"cpu":1,
+		"ram":1024,
+		"storage":2,
+		"kernel_image":"/var/lib/firecracker/hello/hello-vmlinux.bin",
+	  "rootfs_image":"/var/lib/firecracker/hello/hello-rootfs.ext4"
+	}
+}
